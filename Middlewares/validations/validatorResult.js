@@ -7,8 +7,6 @@ module.exports = (req, res, next) => {
       (current, item) => current + item.msg + " ",
       ""
     );
-    let error = new AppError(errorMsg, 422);
-
-    next(error);
+    next(new AppError(errorMsg, 422));
   } else next();
 };
