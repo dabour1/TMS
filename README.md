@@ -47,10 +47,10 @@ JWT_SECRET=your_jwt_secret
 ### Run the Server
 
 ```bash
-npm start
+npm run dev 
 ```
 
-The server will run on `http://localhost:5000`.
+The server will run on `http://localhost:5000` using nodemon .
 
 ---
 
@@ -68,7 +68,7 @@ The server will run on `http://localhost:5000`.
 {
   "name": "John Doe",
   "email": "johndoe@example.com",
-  "password": "password123"
+  "password": "password@123"
 }
 ```
 
@@ -89,7 +89,7 @@ The server will run on `http://localhost:5000`.
 ```json
 {
   "email": "johndoe@example.com",
-  "password": "password123"
+  "password": "password@123"
 }
 ```
 
@@ -139,7 +139,10 @@ The server will run on `http://localhost:5000`.
   "description": "This is task 1",
   "status": "Pending",
   "dueDate": "2024-12-31",
-  "userId": "64f98bcd1234567890abcdef"
+  "userId": "64f98bcd1234567890abcdef",
+  "createdAt": "2024-12-20T16:10:44.880Z",
+  "updatedAt": "2024-12-20T16:10:44.880Z",
+  "__v": 0
 }
 ```
 
@@ -166,6 +169,9 @@ The server will run on `http://localhost:5000`.
     "status": "Pending",
     "dueDate": "2024-12-31",
     "userId": "64f98bcd1234567890abcdef"
+    "createdAt": "2024-12-20T16:10:44.880Z",
+    "updatedAt": "2024-12-20T16:10:44.880Z",
+    "__v": 0
   }
 ]
 ```
@@ -200,6 +206,9 @@ The server will run on `http://localhost:5000`.
   "status": "Completed",
   "dueDate": "2024-12-31",
   "userId": "64f98bcd1234567890abcdef"
+  "createdAt": "2024-12-20T16:10:44.880Z",
+  "updatedAt": "2024-12-20T16:10:44.880Z",
+  "__v": 0
 }
 ```
 
@@ -234,31 +243,13 @@ Use Mocha and Chai to run unit tests.
 ```bash
 npm test
 ```
+### Coverage
+ For test coverage use
 
----
-
-## Folder Structure
-
+```bash
+npm run coverage
 ```
-project
-├── controllers
-│   ├── authController.js
-│   └── taskController.js
-├── models
-│   ├── UserSchema.js
-│   └── TaskSchema.js
-├── routes
-│   ├── authRoutes.js
-│   └── taskRoutes.js
-├── middlewares
-│   └── errorMiddleware.js
-├── app.js
-├── server.js
-└── .env
-```
+ 
+ 
 
----
-
-## License
-
-This project is licensed under the MIT License.
+ 
