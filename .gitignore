@@ -2,3 +2,4 @@ node_modules
 upload
 .env
 .nyc_output
+coverage

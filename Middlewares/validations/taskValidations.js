@@ -1,4 +1,4 @@
-const { body } = require("express-validator");
+const { body, check } = require("express-validator");
 
 exports.createTaskValidation = [
   body("title").trim().notEmpty().withMessage("Title is required."),
@@ -15,6 +15,7 @@ exports.createTaskValidation = [
     .isISO8601()
     .toDate()
     .withMessage("Due Date must be a valid date."),
+  check("userId").not().exists().withMessage("User ID cannot be included."),
 ];
 
 exports.updateTaskValidation = [
@@ -36,4 +37,5 @@ exports.updateTaskValidation = [
     .isISO8601()
     .toDate()
     .withMessage("Due Date must be a valid date."),
+  check("userId").not().exists().withMessage("User ID cannot be updated."),
 ];
