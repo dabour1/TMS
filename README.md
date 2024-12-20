@@ -234,6 +234,18 @@ The server will run on `http://localhost:5000` using nodemon .
 
 ---
 
+## Seed
+
+### Run Seed
+
+```bash
+npm run seed  
+```
+
+---
+
+---
+
 ## Testing
 
 ### Run Unit Tests
@@ -249,7 +261,7 @@ npm test
 ```bash
 npm run coverage
 ```
- 
+ ---
  
 
  
